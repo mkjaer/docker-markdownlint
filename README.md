@@ -14,6 +14,10 @@ To test all files in the current directory write:
 
 ```docker run -v ${PWD}:/inputfiles markdownlint```
 
+To test a single file in the current directory write:
+
+```docker run -v ${PWD}:/inputfiles markdownlint README.md```
+
 Returns 0 if all md files are fine.
 
 Outputs errors and returns 1 if there are issues with the MD files.

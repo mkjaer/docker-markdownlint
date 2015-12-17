@@ -16,7 +16,9 @@ RUN git clone https://github.com/mivok/markdownlint \
  && rm -r markdownlint
 
 RUN mkdir /inputfiles
+WORKDIR /inputfiles
 
 # Ignore rule MD013 Line length
-ENTRYPOINT [ "mdl", "-r", "~MD013" ]
+#ENTRYPOINT [ "mdl", "-r", "~MD013" ]
+ENTRYPOINT [ "mdl" ]
 CMD [ "/inputfiles" ]

@@ -1,7 +1,7 @@
-FROM alpine:3.4
+FROM alpine:3.5
 MAINTAINER Mikael Kjaer <mikael@teletronics.ae>
 
-RUN apk update && apk upgrade && apk --update add ruby git ruby-rake ruby-bundler
+RUN apk add --no-cache ruby git ruby-rake ruby-bundler
 
 RUN git clone https://github.com/mivok/markdownlint && \
     cd markdownlint && \
@@ -12,4 +12,5 @@ RUN git clone https://github.com/mivok/markdownlint && \
 RUN mkdir /inputfiles
 WORKDIR /inputfiles
 
+ENTRYPOINT [ "mdl" ]
 CMD [ "/inputfiles" ]

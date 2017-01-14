@@ -1,5 +1,7 @@
 # MarkdownLint docker container
 
+DEPRECATED: **Use the official version [here](https://github.com/mivok/markdownlint/tree/master/tools/docker)!**
+
 A tool to check markdown files and flag style issues.
 
 Based on [Markdownlint](https://github.com/mivok/markdownlint)

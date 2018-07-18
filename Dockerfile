@@ -1,5 +1,4 @@
-FROM alpine:3.5
-MAINTAINER Mikael Kjaer <mikael@teletronics.ae>
+FROM alpine:3.8
 
 RUN apk add --no-cache ruby git ruby-rake ruby-bundler
 
